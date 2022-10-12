@@ -21,10 +21,10 @@ spec:
   - name: mq-spring-app-dev
     interceptors:
       - ref:
-         name: "cel"
-       params:
-       - name: "filter"
-         value: "header.match('X-GitHub-Event', 'push') && body.ref == 'refs/heads/mq-spring-MQ-DevOps-Demo' && body.repository.full_name == 'MQ-DevOps-Demo/mq-spring-app'"
+          name: "cel"
+        params:
+        - name: "filter"
+          value: "header.match('X-GitHub-Event', 'push') && body.ref == 'refs/heads/mq-spring-MQ-DevOps-Demo' && body.repository.full_name == 'MQ-DevOps-Demo/mq-spring-app'"
    bindings:
      - ref: cnkt-trigger-binding
    template:
