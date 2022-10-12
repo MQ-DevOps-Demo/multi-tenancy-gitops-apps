@@ -25,7 +25,7 @@ spec:
         params:
         - name: "filter"
           value: "header.match('X-GitHub-Event', 'push') && body.ref == 'refs/heads/mq-spring-MQ-DevOps-Demo' && body.repository.full_name == 'MQ-DevOps-Demo/mq-spring-app'"
-   bindings:
-     - ref: cnkt-trigger-binding
-   template:
-     ref: mq-spring-app-dev
+    bindings:
+      - ref: cnkt-trigger-binding
+    template:
+      ref: mq-spring-app-dev
